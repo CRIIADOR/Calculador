@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="calc-wrapper">
+  <div class="calc-label">// calculadora v1.0</div>
+
+  <div class="calculator">
+    <div class="display">
+      <div class="display-history" id="history"></div>
+      <div class="display-current" id="current">0</div>
+    </div>
+
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="clear" onclick="clearAll()">AC</button>
+      <button class="clear" onclick="toggleSign()">+/−</button>
+      <button class="clear" onclick="percent()">%</button>
+      <button class="op"    onclick="setOp('/')">÷</button>
+
+      <!-- Row 2 -->
+      <button onclick="input('7')">7</button>
+      <button onclick="input('8')">8</button>
+      <button onclick="input('9')">9</button>
+      <button class="op" onclick="setOp('*')">×</button>
+
+      <!-- Row 3 -->
+      <button onclick="input('4')">4</button>
+      <button onclick="input('5')">5</button>
+      <button onclick="input('6')">6</button>
+      <button class="op" onclick="setOp('-')">−</button>
+
+      <!-- Row 4 -->
+      <button onclick="input('1')">1</button>
+      <button onclick="input('2')">2</button>
+      <button onclick="input('3')">3</button>
+      <button class="op" onclick="setOp('+')">+</button>
+
+      <!-- Row 5 -->
+      <button onclick="input('0')" class="span2">0</button>
+      <button onclick="inputDot()">.</button>
+      <button class="eq" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <div class="calc-footer">feito com html · css · js</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
